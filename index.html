@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+     <link rel="stylesheet" href="styles.css">
+    
+    <title>reminder.app</title>
+</head>
+<body>
+    <section class="section">
+    <div class="box">
+   <div class="container">
+    <div class="text-center has-text-success">
+        <h1><strong class="has-text-success"> Reminder Application</strong></h1>
+    </div>
+    <div class="main">
+        <form action="" id="task-form" autocomplete="off">
+            <div class="field">
+                <label class="label">Task</label>
+                <div class="control">
+                  <input class="input" id="task" type="text" placeholder="enter what you would like to do today" />
+                </div>
+              </div>
+            <div class="field">
+                <label class="label">Time</label>
+                <div class="control">
+                  <input class="input" id="time" type="time"/>
+                </div>
+              </div>
+            <div class="field">
+                <div class="control">
+                  <button class="button is-success" type="button" onclick="openPopup()">Set</button>
+                  <section class="section">
+                    <div class="popup box" id="popup">
+                        <img src="./Accepted.png" >
+                        <h2>Confirmed</h2>
+                        <p>Your reminder has been set succesfully.</p>
+                        <p>  We will keep you posted !!</p>
+                        <input  class="button is-success" type="submit" value="Ok"  id="btns" onclick="closePopup()"/>
+                      </div>
+                    </section>
+                    </div>
+                
+                </div>
+              </div>
+        </form>
+        <div>
+            <table class="table"> 
+           <thead>
+            <tr>
+              <th>Task</th>  
+              <th>Time</th>  
+              <th>Edit</th>  
+              <th>Delete</th>  
+            </tr>
+           </thead> 
+           <tbody id="task-list">
+            
+
+           </tbody>    
+
+            </table>
+        </div>
+    </div>
+   </div>
+    </div>
+    </section>
+    
+    <script src="index.js"></script>
+  
+</body>
+</html>
